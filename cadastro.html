@@ -1,146 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main_style.css" />
+    <link
+      rel="stylesheet"
+      href="js/plugins/bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css"
+    />
+    <title>BusPoint - Início</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main_style.css" />
-  <link rel="stylesheet" href="js/plugins/bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
-  <title>BusPoint - Início</title>
-</head>
-
-<body>
-  <!-- Header -->
-  <!-- Background -->
-  <div id="banner">
-    <!-- Login/Cadastro -->
-    <div class="row" id="rowlogin">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="cadastro.html">Cadastro</a>
-        </li>
-      </ul>
-    </div>
-    <!-- Titulo -->
-    <h1 id="buspoint">BusPoint</h1>
-    <!-- NavBar -->
-    <div class="row">
-      <br /><br />
-      <div class=".col-xl-" id="nav">
+  <body>
+    <a name="inicio"></a>
+    <!-- Header -->
+    <!-- Background -->
+    <div id="banner">
+      <!-- Login/Cadastro -->
+      <div class="row" id="rowlogin">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sobre.html">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#membros">Membros</a>
+            <a class="nav-link active" href="cadastro.html">Cadastro</a>
           </li>
         </ul>
       </div>
+      <!-- Titulo -->
+      <h1 id="buspoint">BusPoint</h1>
+      <!-- NavBar -->
+      <div class="row">
+        <br /><br />
+        <div class=".col-xl-" id="nav">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Problema</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Nossa ideia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Acessibilidade</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Aplicativo Mobile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Membros</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="container">
+        <form action="post()" class="formulario">
+          <h3>Cadastro do usuário</h3>
+          <div class="form-group">
+              <label for="">Nome:</label><br>
+              <input class="form-control" type="text" name="nome" id="txtNome" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">Sobrenome:</label><br>
+              <input class="form-control" type="text" name="sobrenome" id="txtSobrenome" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">CPF:</label><br>
+              <input class="form-control" type="text" name="cpf" id="txtCpf" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">RG:</label><br>
+              <input class="form-control" type="text" name="rg" id="txtRg" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">Telefone:</label><br>
+              <input class="form-control" type="text" name="telefone" id="txtTelefone" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">E-mail:</label><br>
+              <input class="form-control" type="text" name="email" id="txtEmail" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">Endereço:</label><br>
+              <input class="form-control" type="text" name="endereço" id="txtEndereco" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">CEP:</label><br>
+              <input class="form-control" type="text" name="cep" id="txtCep" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">Data de nascimento:</label><br>
+              <input class="form-control" type="date" name="dataNascimento" id="txtDataNascimento" onchange="verificarPasse()" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">Senha:</label><br>
+              <input class="form-control" type="password" name="senha" id="txtSenha" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="">Confirme sua senha:</label><br>
+              <input class="form-control" type="password" name="confSenha" id="txtConfSenha" required>
+          </div>
+  
+          <div class="form-group">
+              <label for="">Sexo:</label>
+              <select class="form-control" name="genero" id="txtGenero">
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                  <option>Outro</option>
+              </select>
+          </div>
+  
+          <div class="form-group">        
+              <label for="">Tipo de passe:</label>
+              <select class="form-control" name="tipoPasse" id="txtPasse" onchange="verificarPasse()">
+                  <option value="comum">Comum</option>
+                  <option value="estudante">Estudante</option>
+              </select>
+          </div>
+  
+          <div class="form-group" id="inputEstudante">
+              <label for="">Insira seu número de matricula:</label><br>
+              <input class="form-control" type="text" name="matricula" id="txtMatricula" disabled>
+          </div>
+  
+          <div class="form-group" id="inputIdoso">
+              <label for="">Comprovante de residência:</label><br>
+              <input type="file" name="compResidencia" id="txtResidencia" disabled>
+          </div>
+  
+          <button class="btn btn-outline-success" onclick="cadastrar()">Cadastrar</button>
+          <button class="btn btn-outline-danger" id="limpar" type="reset">Limpar campos</button>
+      </form>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <p id="p_footer">© 2020 Copyright</p>
+      </footer>
     </div>
-    <!-- Main -->
-    <div class="container">
-      <form action="post()" class="formulario">
-        <h3>Cadastro do usuário</h3>
-        <div class="form-group">
-            <label for="">Nome:</label><br>
-            <input class="form-control" type="text" name="nome" id="txtNome" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Sobrenome:</label><br>
-            <input class="form-control" type="text" name="sobrenome" id="txtSobrenome" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">CPF:</label><br>
-            <input class="form-control" type="text" name="cpf" id="txtCpf" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">RG:</label><br>
-            <input class="form-control" type="text" name="rg" id="txtRg" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Telefone:</label><br>
-            <input class="form-control" type="text" name="telefone" id="txtTelefone" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">E-mail:</label><br>
-            <input class="form-control" type="text" name="email" id="txtEmail" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Endereço:</label><br>
-            <input class="form-control" type="text" name="endereço" id="txtEndereco" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">CEP:</label><br>
-            <input class="form-control" type="text" name="cep" id="txtCep" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Data de nascimento:</label><br>
-            <input class="form-control" type="date" name="dataNascimento" id="txtDataNascimento" onchange="verificarPasse()" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Senha:</label><br>
-            <input class="form-control" type="password" name="senha" id="txtSenha" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="">Confirme sua senha:</label><br>
-            <input class="form-control" type="password" name="confSenha" id="txtConfSenha" required>
-        </div>
-
-        <div class="form-group">
-            <label for="">Sexo:</label>
-            <select class="form-control" name="genero" id="txtGenero">
-                <option>Masculino</option>
-                <option>Feminino</option>
-                <option>Outro</option>
-            </select>
-        </div>
-
-        <div class="form-group">        
-            <label for="">Tipo de passe:</label>
-            <select class="form-control" name="tipoPasse" id="txtPasse" onchange="verificarPasse()">
-                <option value="comum">Comum</option>
-                <option value="estudante">Estudante</option>
-            </select>
-        </div>
-
-        <div class="form-group" id="inputEstudante">
-            <label for="">Insira seu número de matricula:</label><br>
-            <input class="form-control" type="text" name="matricula" id="txtMatricula" disabled>
-        </div>
-
-        <div class="form-group" id="inputIdoso">
-            <label for="">Comprovante de residência:</label><br>
-            <input type="file" name="compResidencia" id="txtResidencia" disabled>
-        </div>
-
-        <button class="btn btn-outline-success" onclick="cadastrar()">Cadastrar</button>
-        <button class="btn btn-outline-danger" id="limpar" type="reset">Limpar campos</button>
-    </form>
-    </div>
-    <!-- Footer -->
-    <footer>
-      <p id="p_footer">© 2020 Copyright</p>
-    </footer>
-  </div>
-</body>
-<script src="js/plugins/jquery-3.5.1-dist/jquery-3.5.1.min.js"></script>
-<script src="js/plugins/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
-<script src="js/plugins/bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
-
+  </body>
+  <script src="js/plugins/jquery-3.5.1-dist/jquery-3.5.1.min.js"></script>
+  <script src="js/plugins/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+  <script src="js/plugins/bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 </html>
