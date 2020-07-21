@@ -1,0 +1,106 @@
+html,
+body {
+  height: 100%;
+}
+
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+#banner{
+  background-image: url('banner_buspoint.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 242px;
+  padding-bottom: 0%;
+}
+
+#buspoint{
+  padding-top: 55px;
+  color: black;
+  text-align: center;
+}
+
+.nav-link{
+  color: black;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+#membros{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.carousel{
+  padding-top: 20px;
+}
+
+#post1{
+  text-align: center;
+}
+
+#rowlogin{
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100;
+}
+
+#nav{
+  padding-top: 47px;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-top: 25px;
+}
+
+footer{
+  background-image: linear-gradient(to bottom, white, #b3ceec);
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
+
+#p_footer {
+  padding-top: 70px;
+  color: black;
+}
+
+.formulario{
+  width: 40%;
+  height: 70%;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #ededed;
+  margin: auto;
+  margin-top: 65px;
+  margin-bottom: 50px;
+  padding: 25px;
+}
+
+#button_login, #button_limpar{
+  width: 49%;
+}
+
+
+
